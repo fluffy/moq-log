@@ -76,7 +76,7 @@ the Media Over QUIC Transport (MOQT) {{MOQT}}.
 --- middle
 
 
-# Introduction 
+# Introduction
 
 The idea is each device that was logging would publish each log message
 as an MOQT object. The devices or systems publishing the logs are
@@ -117,7 +117,7 @@ The TrackNamespace consists of following tuples (represented in string
 format for ease of readability):
 
 ~~~
- "(moq://moq-syslog.arpa/logs-v1/),(ResourceID)" 
+ "(moq://moq-syslog.arpa/logs-v1/),(ResourceID)"
 ~~~
 
 The TrackName tuple is a single byte that has the log priority level in
