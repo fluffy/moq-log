@@ -247,12 +247,14 @@ Object Status ({{Section 11.1.1 of MOQT}}) and an Object ID one greater
 than the last log message, and close the subgroup. The Datagram delivery
 mode MUST NOT be used.
 
-Seconds without log messages have no group. The publisher SHOULD include
+Seconds without log messages have no group. The publisher MUST include
 the Prior Group ID Gap Object Property ({{Section 10.8 of MOQT}}) on the
 first object of each group, set to the number of seconds since the
-previous group minus one. This allows relays and fetches to know that the
-intervening groups will never exist, rather than leaving them in the
-unknown state.
+previous group minus one, except on the first group it publishes after
+starting, when the previous group is not known. This allows relays and
+fetches to know that the intervening groups will never exist, rather than
+leaving them in the unknown state. Object IDs within a group are
+contiguous, so the Prior Object ID Gap Object Property is not used.
 
 ## Log Record {#record}
 
